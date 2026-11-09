@@ -1,99 +1,841 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>my website</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles2.css">
-</head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Phetego Tjie — ICT Applications Development graduate building software, AI agents and data-driven applications.">
+  <meta name="theme-color" content="#080e1c">
+  <title>Phetego Tjie | Software Developer, Software Support, Data Analyst & AI Builder</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+
 <body>
-    <header class="bg-dark text-white py-3 mb-4">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="logo fs-3 fw-bold text-danger">My Website</div>
-            <!-- Bootstrap Navbar as Menu Bar -->
-            <nav class="navbar navbar-expand-lg navbar-dark">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="hrom.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="portfolio.html">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+
+  <!-- NAVIGATION -->
+  <header class="site-header">
+    <div class="nav-wrap container">
+      <a class="brand" href="#home" aria-label="Phetego Tjie home">
+        <span class="brand-mark">PT<span class="accent">.</span></span>
+        <span class="brand-caption">developer portfolio</span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Open navigation"
+              aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="main-nav" class="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#journey">My Journey</a>
+        <a class="nav-contact" href="#contact">Let's talk ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HOME -->
+    <section class="hero container" id="home">
+      <div class="hero-content">
+        <div class="eyebrow">
+          <span class="pulse"></span>
+          SOFTWARE DEVELOPMENT · AI · DATA
         </div>
-    </header>
-    <main class="container">
-        <section id="intro">
-            <h2>Welcome to My Website</h2>
-            <p>This is a place where I showcase my projects, share my story, and connect with others.</p>
-        </section>
 
-        <section id="featured">
-            <h2>Featured Projects</h2>
-            <p>Check out some of my latest work:</p>
-            <ul>
-                <li><a href="portfolio.html">click here to view my latest projects</a></li>
-            </ul>
-        </section>
-
-        <section id="slideshow">
-            <div class="slideshow-container">
-                <div class="slide fade">
-                    <img src="images/Screenshot 2025-04-21 155909.png" alt="Picture 1" style="width:100%">
-                </div>
-                <div class="slide fade">
-                    <img src="images/Screenshot 2025-05-08 192052.png" alt="Picture 2" style="width:100%">
-                </div>
-                <div class="slide fade">
-                    <img src="images/Screenshot 2025-04-21 160228.png" alt="Picture 3" style="width:100%">
-                </div>
-            </div>
-            <br>
-            <div style="text-align:center">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-dark text-white text-center py-3 mt-5">
-        <p>&copy; 2025 Phetego. All rights reserved.</p>
-        <p>Follow me on:
-            <a href="https://x.com/PhetegoTjie?t=4T0ij94Cb6pczQn5JgnvaQ&s=09" class="text-info">Twitter</a> |
-            <a href="https://linkedin.com" class="text-info">LinkedIn</a> |
-            <a href="https://www.facebook.com/trey.vor.965/" class="text-info">Facebook</a>
+        <p class="hero-intro">
+          Hi, I'm Phetego Tjie <span class="wave">✳</span>
         </p>
-    </footer>
 
-    <!-- Bootstrap JS Bundle (with Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        let slideIndex = 0;
-        showSlides();
+        <h1>
+          Building useful software<span class="hero-dot">.</span><br>
+          <span class="gradient-text">Solving real problems.</span>
+        </h1>
 
-        function showSlides() {
-            let slides = document.getElementsByClassName("slide");
-            let dots = document.getElementsByClassName("dot");
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1 }
-            for (let i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-            setTimeout(showSlides, 3000); // Change image every 3 seconds
-        }
-    </script>
+        <p class="hero-description">
+          ICT Application Development graduate and software support professional
+          working with development teams on AI agents, databases and business
+          applications. I turn ideas and technical challenges into practical solutions.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">
+            Explore my work <span>↗</span>
+          </a>
+
+          <a class="button button-secondary"
+             href="assets/Phetego_Tjie_CV.pdf"
+             download="Phetego_Tjie_CV.pdf">
+            Download CV <span>↓</span>
+          </a>
+        </div>
+
+        <div class="hero-social">
+          <a href="https://github.com/Trevor-67" target="_blank" rel="noopener noreferrer">
+            GitHub ↗
+          </a>
+          <a href="https://www.linkedin.com/in/phetego-tjie/" target="_blank" rel="noopener noreferrer">
+            LinkedIn ↗
+          </a>
+          <a href="mailto:phetegotjie@gmail.com">Email ↗</a>
+        </div>
+      </div>
+
+      <div class="hero-aside">
+        <div class="hero-portrait">
+          <img src="assets/graduation-1.jpg"
+               alt="Phetego Tjie at ICT graduation">
+          <span class="portrait-caption">
+            Phetego Tjie <b>·</b> ICT Graduate & Developer
+          </span>
+        </div>
+
+        <div class="code-card">
+          <div class="code-top">
+            <div class="window-dots"><i></i><i></i><i></i></div>
+            <span>developer_profile.py</span>
+          </div>
+
+          <div class="code-lines">
+            <div><span class="line-no">01</span><span class="syntax-purple">class</span> <span class="syntax-blue">Developer</span>:</div>
+            <div><span class="line-no">02</span>&nbsp;&nbsp;name = <span class="syntax-green">"Phetego Tjie"</span></div>
+            <div><span class="line-no">03</span>&nbsp;&nbsp;focus = [</div>
+            <div><span class="line-no">04</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="syntax-green">"Software Engineering"</span>,</div>
+            <div><span class="line-no">05</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="syntax-green">"AI Development"</span>,</div>
+            <div><span class="line-no">06</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="syntax-green">"Data & Automation"</span></div>
+            <div><span class="line-no">07</span>&nbsp;&nbsp;]</div>
+            <div><span class="line-no">08</span>&nbsp;&nbsp;location = <span class="syntax-green">"Cape Town, ZA"</span></div>
+            <div><span class="line-no">09</span>&nbsp;&nbsp;mindset = <span class="syntax-green">"Keep building"</span></div>
+          </div>
+
+          <div class="code-bottom">
+            <span class="status-dot"></span>
+            Open to junior developer opportunities
+          </div>
+        </div>
+
+        <div class="floating-label">
+          <span class="sparkle">✦</span>
+          From support to software engineering
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider container"></div>
+
+    <!-- ABOUT -->
+    <section class="section container" id="about">
+      <div class="section-heading">
+        <p class="section-kicker">01 / ABOUT ME</p>
+        <h2>
+          More than code.<br>
+          <span class="muted">A problem-solving mindset.</span>
+        </h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-copy">
+          <p>
+            I'm an <strong>ICT Applications Development graduate from
+            Walter Sisulu University</strong>, based in Cape Town,
+            South Africa. My interests span software engineering,
+            intelligent applications, data analytics and building
+            technology that makes everyday work easier.
+          </p>
+
+          <p>
+            At <strong>Lesaka Technologies</strong>, I support software
+            and business systems while collaborating with the development
+            team on AI agents aimed at improving customer experiences.
+            My work brings together Python, SQL, BigQuery, data preparation,
+            troubleshooting and continuous improvement.
+          </p>
+
+          <p>
+            I have also served as a <strong>Java and System Software
+            Student Tutor</strong> and a <strong>Student Residence Mentor</strong>
+            at Walter Sisulu University, strengthening my leadership,
+            communication and technical knowledge.
+          </p>
+
+          <p>
+            Outside my day-to-day work, I build personal and hackathon
+            projects — from AI-assisted training workflows to desktop
+            applications and tools for small businesses. I'm growing toward
+            a <strong>Junior Software Developer / Software Engineer</strong>
+            role where I can contribute to production software and keep learning.
+          </p>
+        </div>
+
+        <div class="about-facts">
+          <div>
+            <span>Current role</span>
+            <strong>Software Support & AI Agent Development</strong>
+          </div>
+          <div>
+            <span>Based in</span>
+            <strong>Cape Town, South Africa</strong>
+          </div>
+          <div>
+            <span>Education</span>
+            <strong>Diploma in ICT Applications Development</strong>
+          </div>
+          <div>
+            <span>Career focus</span>
+            <strong>Software Engineering · AI · Data</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section section-panel" id="experience">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">02 / EXPERIENCE</p>
+          <h2>Where I've been <span class="gradient-text">building.</span></h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <span class="date-chip">MAR 2026 — PRESENT</span>
+              <span class="timeline-place">Cape Town · Lesaka Technologies</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Software Support <span class="thin">/ AI Agent Development</span></h3>
+              <p>
+                Collaborate with the Software Development team on AI agents
+                designed to improve customer experience and address recurring
+                client issues. Prepare and validate data using Python, SQL and
+                BigQuery, contribute technical improvements and troubleshoot
+                software, database, reporting and POS/payment-system issues.
+              </p>
+              <div class="tag-list">
+                <span>Python</span><span>SQL</span><span>BigQuery</span>
+                <span>AI Agents</span><span>Software Support</span>
+                <span>Salesforce exposure</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <span class="date-chip">FEB — DEC 2025</span>
+              <span class="timeline-place">Samsung Innovation Campus · WSU</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Developer & Data Analyst Intern</h3>
+              <p>
+                Developed Python programming and data analysis projects.
+                Worked with Pandas to clean, sort, transform and explore
+                structured datasets, and practised visualising information
+                to communicate useful insights.
+              </p>
+              <div class="tag-list">
+                <span>Python</span><span>Pandas</span>
+                <span>Data Analysis</span><span>Visualisation</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <span class="date-chip">2026</span>
+              <span class="timeline-place">Walter Sisulu University</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Student Tutor <span class="thin">/ Java & System Software</span></h3>
+              <p>
+                Supported fellow students with Java programming and System
+                Software concepts, helping explain technical material
+                and strengthen practical understanding.
+              </p>
+              <div class="tag-list">
+                <span>Java</span><span>System Software</span>
+                <span>Peer Learning</span><span>Communication</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <span class="date-chip">2024</span>
+              <span class="timeline-place">Walter Sisulu University</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Student Residence Mentor</h3>
+              <p>
+                Served as a student residence mentor, supporting fellow
+                students and contributing to a positive, supportive
+                residence environment.
+              </p>
+              <div class="tag-list">
+                <span>Mentorship</span><span>Leadership</span>
+                <span>Student Support</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section container" id="skills">
+      <div class="section-heading">
+        <p class="section-kicker">03 / TECH STACK</p>
+        <h2>Tools I use to <span class="gradient-text">make things work.</span></h2>
+        <p class="section-lead">
+          A mix of hands-on development, data, systems support
+          and technologies I've studied.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">&lt;/&gt;</div>
+          <h3>Programming</h3>
+          <p>Python · Java · JavaScript · TypeScript · PHP · VB.NET</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">{ }</div>
+          <h3>Web & Applications</h3>
+          <p>HTML · CSS · Flask · REST API concepts · OOP · Debugging · Testing</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">▤</div>
+          <h3>Databases & Data</h3>
+          <p>SQL · BigQuery · MySQL · SQLite · Oracle APEX · Pandas · Excel</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">✳</div>
+          <h3>AI & Analytics</h3>
+          <p>AI agents · OpenAI technologies · Data preparation · Looker Studio · Visualisation</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">⌘</div>
+          <h3>Platforms & Tools</h3>
+          <p>Git · GitHub · VS Code · Linux fundamentals · Figma · Salesforce basics</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">↗</div>
+          <h3>Business Systems</h3>
+          <p>POS/payment systems · Software troubleshooting · Reporting · Systems analysis</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section section-panel" id="projects">
+      <div class="container">
+        <div class="section-heading projects-heading">
+          <div>
+            <p class="section-kicker">04 / SELECTED WORK</p>
+            <h2>Projects with <span class="gradient-text">purpose.</span></h2>
+            <p class="section-lead">
+              Practical applications, AI prototypes and software
+              projects I've developed through personal work,
+              studies and hackathons.
+            </p>
+          </div>
+          <a class="text-link"
+             href="https://github.com/Trevor-67?tab=repositories"
+             target="_blank" rel="noopener noreferrer">
+            All GitHub repositories ↗
+          </a>
+        </div>
+
+        <div class="project-grid">
+
+          <!-- SMARTTRAIN -->
+          <article class="project-card featured-project">
+            <div class="project-art project-cover">
+              <img src="assets/smarttrain.png"
+                   alt="Concept artwork representing SmartTrain AI"
+                   loading="lazy">
+            </div>
+            <div class="project-content">
+              <div class="project-topline">
+                <span class="project-number">01 / FEATURED PROJECT</span>
+                <span class="project-type">Personal · AI Prototype</span>
+              </div>
+              <h3>SmartTrain AI</h3>
+              <p>
+                An AI-assisted training management application developed
+                using Python and Flask to streamline training requests,
+                trainer assignment, scheduling and customer communication.
+                The prototype includes a database-backed dashboard,
+                training case statuses and simulated messaging workflows
+                to reduce manual coordination.
+              </p>
+              <div class="tag-list">
+                <span>Python</span>
+                <span>Flask</span>
+                <span>SQLite</span>
+                <span>AI Workflows</span>
+              </div>
+              <a class="project-link"
+                 href="https://github.com/Trevor-67/SmartTrain-AI"
+                 target="_blank" rel="noopener noreferrer">
+                View GitHub Repository ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- WEATHER -->
+          <article class="project-card">
+            <div class="project-art project-cover">
+              <img src="assets/weather.png"
+                   alt="Concept artwork representing weather data analysis"
+                   loading="lazy">
+            </div>
+            <div class="project-content">
+              <div class="project-topline">
+                <span class="project-number">02 / DATA PROJECT</span>
+                <span class="project-type">Desktop Application</span>
+              </div>
+              <h3>Weather Trend Analysis</h3>
+              <p>
+                A Python desktop application that analyses historical
+                weather datasets, visualises temperature and rainfall
+                trends, and explores precipitation forecasting and
+                experimental flood-risk indicators through data analysis.
+              </p>
+              <div class="tag-list">
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>Tkinter</span>
+                <span>Matplotlib</span>
+              </div>
+              <a class="project-link"
+                 href="https://github.com/Trevor-67/Python_Weather_analysis"
+                 target="_blank" rel="noopener noreferrer">
+                View GitHub Repository ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- HR MANAGEMENT -->
+          <article class="project-card">
+            <div class="project-art project-cover">
+              <img src="assets/hr-system.png"
+                   alt="Concept artwork representing HR management software"
+                   loading="lazy">
+            </div>
+            <div class="project-content">
+              <div class="project-topline">
+                <span class="project-number">03 / SYSTEM DESIGN</span>
+                <span class="project-type">Academic Project</span>
+              </div>
+              <h3>Human Resource Management</h3>
+              <p>
+                A recruitment management project focused on simplifying
+                job applications, organising recruitment information and
+                improving visibility into hiring workflows. The project
+                explores more structured and transparent recruitment processes.
+              </p>
+              <div class="tag-list">
+                <span>Application Design</span>
+                <span>Recruitment</span>
+                <span>Systems</span>
+              </div>
+              <a class="project-link"
+                 href="https://github.com/Trevor-67/Human_Resource_Managment"
+                 target="_blank" rel="noopener noreferrer">
+                View GitHub Repository ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- STUDENT MANAGEMENT -->
+          <article class="project-card">
+            <div class="project-art project-cover">
+              <img src="assets/student-system.png"
+                   alt="Concept artwork representing Java student management"
+                   loading="lazy">
+            </div>
+            <div class="project-content">
+              <div class="project-topline">
+                <span class="project-number">04 / JAVA PROJECT</span>
+                <span class="project-type">Desktop Application</span>
+              </div>
+              <h3>Student Management System</h3>
+              <p>
+                A Java Swing desktop application demonstrating
+                object-oriented programming and CRUD operations.
+                Users can create, view, update and delete student
+                records through a graphical interface using an
+                in-memory collection.
+              </p>
+              <div class="tag-list">
+                <span>Java</span>
+                <span>Swing</span>
+                <span>OOP</span>
+                <span>CRUD</span>
+              </div>
+              <a class="project-link"
+                 href="https://github.com/Trevor-67/StudentManagment"
+                 target="_blank" rel="noopener noreferrer">
+                View GitHub Repository ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- AUTOMOTIVE -->
+          <article class="project-card">
+            <div class="project-art project-cover">
+              <img src="assets/automotive.png"
+                   alt="Concept artwork representing automotive marketplace"
+                   loading="lazy">
+            </div>
+            <div class="project-content">
+              <div class="project-topline">
+                <span class="project-number">05 / HACKATHON</span>
+                <span class="project-type">Web Prototype</span>
+              </div>
+              <h3>Automotive Ads</h3>
+              <p>
+                An automotive marketplace web prototype developed during
+                an SMME hackathon. The project explored how small businesses
+                could showcase vehicles, products and services through a
+                digital platform to improve product discovery and
+                customer engagement.
+              </p>
+              <div class="tag-list">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Bootstrap</span>
+              </div>
+              <span class="project-note">
+                Hackathon prototype · Repository link to be added
+              </span>
+            </div>
+          </article>
+
+          <!-- TICKETING -->
+          <article class="project-card">
+            <div class="project-art project-cover">
+              <img src="assets/ticketing.png"
+                   alt="Concept artwork representing support ticket management"
+                   loading="lazy">
+            </div>
+            <div class="project-content">
+              <div class="project-topline">
+                <span class="project-number">06 / HACKATHON</span>
+                <span class="project-type">Application Concept</span>
+              </div>
+              <h3>Support Ticketing System</h3>
+              <p>
+                A support ticket management application concept for
+                organising user requests and tracking issues throughout
+                the support lifecycle. It focuses on recording tickets,
+                monitoring their progress and supporting structured
+                workflows from creation to resolution.
+              </p>
+              <div class="tag-list">
+                <span>Ticket Management</span>
+                <span>Workflow</span>
+                <span>Support Systems</span>
+              </div>
+              <span class="project-note">
+                Hackathon project · Repository link to be added
+              </span>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="other-work">
+          <h3>Additional Work</h3>
+          <p>
+            <strong>SME Support System:</strong>
+            AI-assisted small-business guidance prototype.
+            <strong>POS Sales Analytics:</strong>
+            SQL and Looker Studio reporting on transactional sales data.
+            <strong>Academic Applications:</strong>
+            HTML, CSS, PHP, MySQL and Java projects.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section container" id="education">
+      <div class="section-heading">
+        <p class="section-kicker">05 / EDUCATION & CERTIFICATIONS</p>
+        <h2>Always <span class="gradient-text">learning.</span></h2>
+      </div>
+
+      <div class="education-grid">
+        <div class="education-main">
+          <span class="date-chip">2025</span>
+          <h3>National Diploma in ICT: Applications Development</h3>
+          <p>Walter Sisulu University</p>
+          <p class="small-muted">
+            Software Development · OOP · Database Development · SQL ·
+            Web Development · Systems Analysis & Design · Information
+            Systems · Software Engineering
+          </p>
+        </div>
+
+        <div class="cert-card">
+          <h3>Certifications & Training</h3>
+          <ul>
+            <li>
+              <strong>Samsung Innovation Campus</strong>
+              <span>Certificate of Competence in Coding and Programming · Dec 2025</span>
+            </li>
+            <li>
+              <strong>Samsung Innovation Campus</strong>
+              <span>Python Programming and Data Analysis</span>
+            </li>
+            <li>
+              <strong>Cisco Networking Academy</strong>
+              <span>Python Essentials 1</span>
+            </li>
+            <li>
+              <strong>FNB IT Varsity</strong>
+              <span>Full Stack Development</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- MY JOURNEY SLIDESHOW -->
+    <section class="section container" id="journey">
+      <div class="section-heading">
+        <p class="section-kicker">06 / MY JOURNEY</p>
+        <h2>Beyond the code. <span class="gradient-text">The story so far.</span></h2>
+        <p class="section-lead">
+          Moments from my education, mentorship, tutoring,
+          hackathons and professional development.
+        </p>
+      </div>
+
+      <div class="journey-slideshow" id="journey-slideshow"
+           role="region" aria-roledescription="carousel"
+           aria-label="My professional journey">
+
+        <div class="slideshow-stage">
+
+          <figure class="journey-slide active">
+            <img src="assets/graduation-1.jpg" alt="Phetego at ICT graduation">
+            <figcaption>
+              <span class="slide-category">EDUCATION · 2025</span>
+              <h3>ICT Application Development Graduate</h3>
+              <p>
+                Graduating from Walter Sisulu University marked an
+                important milestone in my journey toward becoming
+                a software developer.
+              </p>
+            </figcaption>
+          </figure>
+
+          <figure class="journey-slide">
+            <img src="assets/graduation-2.jpg" alt="ICT graduation day">
+            <figcaption>
+              <span class="slide-category">WALTER SISULU UNIVERSITY</span>
+              <h3>A Milestone Worth Celebrating</h3>
+              <p>
+                Completing my ICT qualification strengthened my
+                foundation in programming, databases, systems
+                analysis and software engineering.
+              </p>
+            </figcaption>
+          </figure>
+
+          <figure class="journey-slide">
+            <img src="assets/samsung-ceremony.jpg" alt="Samsung Innovation Campus ceremony">
+            <figcaption>
+              <span class="slide-category">SAMSUNG INNOVATION CAMPUS · 2025</span>
+              <h3>Coding & Programming Certification</h3>
+              <p>
+                Completing the Samsung Innovation Campus programme
+                helped me develop practical Python programming
+                and data analysis skills.
+              </p>
+            </figcaption>
+          </figure>
+
+          <figure class="journey-slide">
+            <img src="assets/samsung-portrait.jpg" alt="Samsung Innovation Campus portrait">
+            <figcaption>
+              <span class="slide-category">CONTINUOUS LEARNING</span>
+              <h3>Growing My Technical Skills</h3>
+              <p>
+                My learning journey includes Python, Pandas,
+                data cleaning, data transformation and
+                visualisation of structured datasets.
+              </p>
+            </figcaption>
+          </figure>
+
+          <figure class="journey-slide">
+            <img src="assets/mentor.jpg" alt="Student Residence Mentor recognition">
+            <figcaption>
+              <span class="slide-category">LEADERSHIP · 2024</span>
+              <h3>Student Residence Mentor</h3>
+              <p>
+                At Walter Sisulu University, I supported fellow
+                students, developed leadership skills and learned
+                the importance of responsibility, teamwork
+                and communication.
+              </p>
+            </figcaption>
+          </figure>
+
+          <figure class="journey-slide">
+            <img src="assets/tutor.jpg" alt="Student Tutor recognition">
+            <figcaption>
+              <span class="slide-category">ACADEMIC SUPPORT · 2026</span>
+              <h3>Java & System Software Student Tutor</h3>
+              <p>
+                Supporting students with Java and System Software
+                allowed me to share technical knowledge while
+                strengthening my own programming understanding
+                and communication skills.
+              </p>
+            </figcaption>
+          </figure>
+
+          <figure class="journey-slide">
+            <img src="assets/smme-coding.jpg" alt="Coding at the SMME hackathon">
+            <figcaption>
+              <span class="slide-category">HACKATHON · SOFTWARE DEVELOPMENT</span>
+              <h3>Building Solutions for SMMEs</h3>
+              <p>
+                Working on an automotive-focused web prototype
+                designed to help small businesses improve digital
+                visibility, product discovery and customer engagement.
+              </p>
+            </figcaption>
+          </figure>
+
+          <figure class="journey-slide">
+            <img src="assets/smme-team.jpg" alt="Team collaboration at the SMME hackathon">
+            <figcaption>
+              <span class="slide-category">HACKATHON · TEAMWORK</span>
+              <h3>Collaborating Under Pressure</h3>
+              <p>
+                The SMME hackathon gave me an opportunity to
+                collaborate, exchange ideas and apply development
+                skills to a practical business challenge.
+              </p>
+            </figcaption>
+          </figure>
+
+          <figure class="journey-slide">
+            <img src="assets/lesaka-portrait.jpg" alt="Phetego at Lesaka Technologies">
+            <figcaption>
+              <span class="slide-category">PROFESSIONAL EXPERIENCE · 2026</span>
+              <h3>My Journey at Lesaka Technologies</h3>
+              <p>
+                Working in a fintech environment has exposed me
+                to software support, business systems, SQL,
+                BigQuery and AI-powered solutions.
+              </p>
+            </figcaption>
+          </figure>
+
+          <figure class="journey-slide">
+            <img src="assets/lesaka-office.jpg" alt="Workplace experience at Lesaka">
+            <figcaption>
+              <span class="slide-category">AI DEVELOPMENT · FINTECH</span>
+              <h3>From Software Support to AI Development</h3>
+              <p>
+                Collaborating with developers on AI agents and
+                learning from real client problems continues to
+                shape my growth toward software engineering.
+              </p>
+            </figcaption>
+          </figure>
+
+        </div>
+
+        <div class="slideshow-controls">
+          <button class="slide-arrow slide-prev"
+                  type="button" aria-label="Previous photo">←</button>
+
+          <div class="slideshow-center">
+            <span class="slide-counter" aria-live="polite">01 / 10</span>
+            <div class="slide-dots" aria-label="Choose photo"></div>
+          </div>
+
+          <button class="slide-arrow slide-next"
+                  type="button" aria-label="Next photo">→</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+      <div class="container contact-inner">
+        <div>
+          <p class="section-kicker">07 / GET IN TOUCH</p>
+          <h2>Let's build something <span class="gradient-text">meaningful.</span></h2>
+          <p>
+            Interested in collaborating, discussing a software
+            project or connecting about a junior developer
+            opportunity? I'd love to hear from you.
+          </p>
+          <a class="button button-primary"
+             href="mailto:phetegotjie@gmail.com?subject=Hello%20Phetego">
+            Send me an email ↗
+          </a>
+        </div>
+
+        <div class="contact-links">
+          <a href="mailto:phetegotjie@gmail.com">
+            <span>Email</span>
+            <strong>phetegotjie@gmail.com</strong>
+            <span>↗</span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/phetego-tjie/"
+             target="_blank" rel="noopener noreferrer">
+            <span>LinkedIn</span>
+            <strong>Connect with me</strong>
+            <span>↗</span>
+          </a>
+
+          <a href="https://github.com/Trevor-67"
+             target="_blank" rel="noopener noreferrer">
+            <span>GitHub</span>
+            <strong>Trevor-67</strong>
+            <span>↗</span>
+          </a>
+
+          <a href="assets/Phetego_Tjie_CV.pdf"
+             download="Phetego_Tjie_CV.pdf">
+            <span>Resume</span>
+            <strong>Download my CV</strong>
+            <span>↓</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>
+        © <span id="year">2026</span> Phetego Tjie.
+        Built with care and curiosity.
+      </span>
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
 </body>
 </html>

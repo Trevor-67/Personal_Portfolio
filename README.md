@@ -1,127 +1,42 @@
-# Personal Developer Portfolio
+# Phetego Tjie — Developer Portfolio
 
-**Software Development | Application Development | Data Analytics**
+Responsive, single-page Dark Tech portfolio showcasing software engineering, AI agent development, data analytics, professional experience, education and selected projects.
 
-## About the Portfolio
+## Preview locally
 
-Welcome to my personal developer portfolio!
+Open `index.html` in a browser. For a local server, from this folder run:
 
-I am Phetego Tjie, an ICT Application Development graduate from Walter Sisulu University with practical experience in software support, application development, database management, and AI-driven solutions.
+```bash
+python -m http.server 8000
+```
 
-This portfolio serves as a central platform to showcase my technical skills, academic background, professional experience, and software development projects.
+Then open http://localhost:8000.
 
-**Live Portfolio:** https://phetego33.github.io/TRR/
+## Publish on GitHub Pages
 
-## Portfolio Objectives
+Upload the **contents** of this folder to your portfolio repository (ensure `index.html` is at repository root). In repository Settings → Pages, select **Deploy from a branch**, your main branch, and **/(root)**. GitHub Pages will provide a URL after deployment. Check the published URL rather than assuming the previous GitHub Pages link will continue to work after repository transfers.
 
-The purpose of this website is to:
+## Files
 
-- Present my technical skills and qualifications.
-- Showcase personal and academic software projects.
-- Highlight my professional experience.
-- Demonstrate my development journey.
-- Connect with recruiters, developers, and potential employers.
+- `index.html`: content and sections
+- `styles.css`: responsive dark theme
+- `script.js`: mobile navigation and footer year
+- `assets/Phetego_Tjie_CV.pdf`: downloadable CV
+- `images/`: original portfolio images, preserved for future use
 
-## Featured Projects
+## Before publishing
 
-### SmartTrain AI
+- Confirm the CV contact details and whether you want a phone number visible on the website (currently phone is **only** in the downloadable CV).
+- Provide repository URLs for Automotive Ads and Support Ticketing System; placeholders currently say “Repository link to be added”.
+- Verify all project descriptions, particularly whether the HRM project is best described as an academic project and whether the SME Support System should have its own card.
+- Confirm any additional achievements, projects, credentials or experience to add.
 
-An AI-assisted training management and scheduling application developed using Python and Flask.
+No contact form backend is required: email uses a `mailto:` link. External fonts are loaded from Google Fonts; system font fallbacks are provided.
 
-Designed to simplify training requests, trainer assignments, scheduling, and customer communication.
 
-### Human Resource Management System (HRM)
+## New additions
+- Ten original photos in `assets/`, displayed in the hero and My Journey gallery.
+- Walter Sisulu University Student Tutor (Java & System Software, 2026).
+- Walter Sisulu University Student Residence Mentor (2024).
 
-A recruitment management project designed to simplify job applications, improve hiring transparency, and reduce opportunities for favouritism and nepotism.
-
-### Student Management System
-
-A Java Swing desktop application that supports student record management through CRUD operations.
-
-### Weather Trend Analysis
-
-A Python desktop application for analysing historical weather patterns, visualising temperature trends, forecasting precipitation, and exploring potential flood risk.
-
-## Technical Skills
-
-**Programming Languages**
-- Python
-- Java
-- PHP
-- JavaScript
-- SQL
-- VB.NET
-
-**Web and Application Development**
-- HTML
-- CSS
-- Flask
-- REST API concepts
-- Object-Oriented Programming
-
-**Databases and Analytics**
-- MySQL
-- SQLite
-- BigQuery
-- Pandas
-- Looker Studio
-- Data Analysis and Visualisation
-
-**Tools and Platforms**
-- Git and GitHub
-- Visual Studio Code
-- Figma
-- Salesforce
-- Linux fundamentals
-
-## Education
-
-**Diploma in ICT Application Development & Information Systems**
-
-Walter Sisulu University
-
-**Samsung Innovation Campus**
-
-Coding and Programming Programme — February 2025 to December 2025
-
-## Professional Experience
-
-### Lesaka — Software Support Intern
-
-March 2026 – Present
-
-Working with software systems, databases, technical troubleshooting, reporting, and AI-assisted application development.
-
-Experience includes Python, SQL, BigQuery, customer-facing systems, and software development collaboration.
-
-## Portfolio Website
-
-Visit my live portfolio:
-
-https://phetego33.github.io/TRR/
-
-## GitHub
-
-Explore my repositories and development projects:
-
-https://github.com/Trevor-67
-
-## Future Improvements
-
-- Keep featured projects updated.
-- Add new software development projects.
-- Improve portfolio responsiveness and accessibility.
-- Include project screenshots and demonstrations.
-- Highlight additional professional achievements.
-- Maintain updated links to GitHub repositories.
-
-## Purpose
-
-This portfolio represents my continued growth as an aspiring Software Developer and my interest in building practical, scalable, and data-driven applications that solve real-world problems.
-
----
-
-**Developer:** Phetego Tjie  
-**Focus:** Software Development | Application Development | Data Analytics  
-**Location:** South Africa  
-**Portfolio:** https://phetego33.github.io/TRR/
+To preview, extract the ZIP completely and open `index.html`. Keep `styles.css`, `script.js` and the `assets/` folder beside it.
